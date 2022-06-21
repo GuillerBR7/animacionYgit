@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: " navbar navbar navbar"
+                         " header header header "
+                         " main   main   main"  
+                         "aside   asride aside"                                               
+                         " footer footer footer ";
+                             
+}
+.navbar{
+    grid-area: navbar;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+    
+.navbar ul li a{
+text-decoration: none;
+font-size: 10px ;
+
+}
+
+nav ul li{
+
+        padding: 10px;
+        color: rgb(165, 14, 14);
+}
+    
+
+.header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    
+
+
+
+}
+.aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(108,197,217,1) 49%, rgba(0,212,255,1) 100%);
+    
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo{
+    display: flex;
+    width: 700px;
+   justify-content: center;
+}
+.imgPrincipal{
+    
+    width: 300px;
+   
+}
+
+.texto{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    padding: 20px;
+    margin: 20px;
+    font-style: italic;
+}
+@media (min-width:400px){
+    .logo{
+        width: 70px;
+        order: 1;
+    }
+    .navbar ul:nth-child(2){
+        order: 1;
+    }
+    .navbar ul{
+        align-items: center;
+    }
+
+.contenedor{
+   
+    grid-template-columns: 1fr 1fr 1fr fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: " navbar navbar navbar navbar"
+                         " header header header header"
+                         " main   main   main   main" 
+                         " aside  aside  aside  aside"                                                
+                         " footer footer footer footer";
+        
+}
+.etiqueta{
+    display: flex;    
+    height: 100%;
+    
+}
+.navbar{
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    align-items: center;
+}
+.main{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+}
+.minilogo{
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+}
+
+.imgCard{
+    width: 150px;
+    margin: 20px;
+    padding: 20px;
+}
+.card{
+    margin: 20px;
+    padding: 20px;
+}
+
+.btn{
+    background-color: blue;
+    color: azure;
+}
